@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KnowledgeForge - Interactive Quiz Challenge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="app-container">
+        <header class="quiz-header">
+            <h1 class="quiz-title">KnowledgeForge</h1>
+            <p class="quiz-subtitle">Master knowledge through interactive challenges</p>
+        </header>
+
+        <!-- Welcome Screen -->
+        <div class="welcome-screen" id="welcomeScreen">
+            <div class="welcome-content">
+                <h2>Welcome to KnowledgeForge</h2>
+                <p>Test your knowledge across multiple categories with our interactive quiz platform. Challenge yourself with questions ranging from easy to expert level.</p>
+                
+                <ul class="features-list">
+                    <li>Three difficulty levels: Easy, Medium, and Hard</li>
+                    <li>Diverse questions covering science, technology, history, and more</li>
+                    <li>Instant feedback with detailed explanations</li>
+                    <li>Progress tracking and performance analytics</li>
+                    <li>Earn unique badges based on your performance</li>
+                    <li>Download personalized achievement certificates</li>
+                </ul>
+
+                <div class="difficulty-selection">
+                    <h3 class="difficulty-title">Choose Your Challenge Level:</h3>
+                    <div class="difficulty-options">
+                        <div class="difficulty-card easy" data-difficulty="easy">
+                            <div class="difficulty-icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                    <circle cx="20" cy="20" r="18" stroke="#00ff88" stroke-width="2" fill="rgba(0,255,136,0.1)"/>
+                                    <path d="M15 20L18 23L25 16" stroke="#00ff88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="difficulty-name">Easy</div>
+                            <div class="difficulty-desc">Perfect for beginners<br>5 questions</div>
+                        </div>
+                        <div class="difficulty-card medium" data-difficulty="medium">
+                            <div class="difficulty-icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                    <polygon points="20,5 25,15 35,15 27,23 30,33 20,28 10,33 13,23 5,15 15,15" stroke="#ffaa00" stroke-width="2" fill="rgba(255,170,0,0.1)"/>
+                                </svg>
+                            </div>
+                            <div class="difficulty-name">Medium</div>
+                            <div class="difficulty-desc">Good challenge<br>8 questions</div>
+                        </div>
+                        <div class="difficulty-card hard" data-difficulty="hard">
+                            <div class="difficulty-icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                    <path d="M20 5L25 15L35 15L27 23L30 33L20 28L10 33L13 23L5 15L15 15L20 5Z" stroke="#ff00ff" stroke-width="2" fill="rgba(255,0,255,0.1)"/>
+                                    <circle cx="20" cy="20" r="8" stroke="#ff00ff" stroke-width="2" fill="rgba(255,0,255,0.2)"/>
+                                </svg>
+                            </div>
+                            <div class="difficulty-name">Hard</div>
+                            <div class="difficulty-desc">Expert level<br>10 questions</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="start-button" id="startButton" disabled><span>Start Quiz Challenge</span></button>
+            </div>
+        </div>
+
+        <!-- Progress Container -->
+        <div class="progress-container" id="progressContainer" style="display: none;">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-info">
+                <span id="progressText">Question 1 of 5</span>
+                <span id="difficultyDisplay">Easy Mode</span>
+            </div>
+        </div>
+
+        <!-- Quiz Card -->
+        <div class="quiz-card" id="quizCard" style="display: none;">
+            <div class="question-header">
+                <div class="question-number" id="questionNumber">Question 1</div>
+                <div class="difficulty-badge" id="questionDifficulty">Easy</div>
+            </div>
+            <h2 class="question-text" id="questionText">Loading...</h2>
+            <div class="answers-container" id="answersContainer"></div>
+            <button class="next-button" id="nextButton" disabled>Next Question</button>
+        </div>
+
+        <footer class="footer">
+            <p>© 2025 Made by <a href="#">GlitchForge</a> | KnowledgeForge Quiz Challenge</p>
+        </footer>
+      <script src="script.js"></script>
+    </main>
+    
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98f6155bd76c25b1',t:'MTc2MDYwMjI2NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>
